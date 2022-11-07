@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 0.5rem 2rem;
+
+  h2 {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .link {
+    text-decoration: none;
+  }
+}
+
+.userControls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  button {
+    border-radius: 4px;
+    height: auto;
+    padding: 1rem 1.5rem;
+    background-color: white;
+  }
+
+  .signButton {
+    border: none;
+    background-color: white;
+  }
+
+  .signButton:hover, .createArticle:hover {
+    border: 1px solid #52C41A;
+    border-radius: 5px;
+    color: #52C41A;
+  }
+
+  .createArticle {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.85);
+  gap: 8px;
+
+  img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}

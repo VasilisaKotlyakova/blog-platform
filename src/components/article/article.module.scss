@@ -1,0 +1,168 @@
+.container {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #1890ff;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+}
+
+.likeBox {
+  display: flex;
+  height: 28px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-left: 10px;
+}
+
+.heartFilled svg,
+.heartOutlined svg {
+  width: 16px;
+  height: 16px;
+}
+
+.heartFilled path {
+  stroke: transparent;
+  fill: #ff0707;
+}
+
+.heartFilled {
+  animation: heartEnter 240ms ease;
+  transform-origin: center;
+}
+
+@keyframes heartEnter {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartOutlined path {
+  stroke: rgba(0, 0, 0, 0.75);
+}
+
+.authorBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-left: 80px;
+
+  h3 {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  padding: 0;
+  margin-top: -20px;
+
+  li {
+    display: block;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
+
+.previewContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 0px;
+}
+
+.deleteButton {
+  color: rgba(245, 34, 45, 1);
+  border-color: rgba(245, 34, 45, 1);
+}
+
+.editButton {
+  color: rgba(82, 196, 26, 1);
+  border-color: rgba(82, 196, 26, 1);
+}
+
+.body {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.75);
+  word-break: break-all;
+}
+
+.deleteArticle {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.5rem;
+
+    path {
+      fill: #faad14;
+    }
+  }
+}
