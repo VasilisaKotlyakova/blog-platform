@@ -1,11 +1,12 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import Api from '../../service/service';
-import { profileSelector, authTokenSelector } from '../../store/reducer/userSlice';
-import FormContainer from '../forms/form-container';
+import { apiConnect } from '../../services/service';
+import { profileSelector, authTokenSelector } from '../../store/reducers/userSlice';
 import ProfileForm from '../forms/profile-form';
+import styles from '../forms/form-container.module.scss';
 
 export const useAuthFilter = () => {
   const authToken = useSelector(authTokenSelector);
@@ -23,14 +24,18 @@ function ProfilePage() {
   const navigate = useNavigate();
 
   const handleSave = async (user) => {
-    await Api.default.editProfile(user);
-    navigate('/');
+    const res = await apiConnect.editProfile(user);
+    if(res.status === 200) {
+      navigate('/success');
+    } else navigate('/error');
   };
 
   return (
-    <FormContainer>
-      <ProfileForm defaultValue={profile} onCommit={handleSave} />
-    </FormContainer>
+    <div className={styles.container}>
+      <div className={styles.body} style={{width: "450px"}}>
+        <ProfileForm defaultValue={profile} onCommit={handleSave} />
+      </div>
+    </div>
   );
 }
 

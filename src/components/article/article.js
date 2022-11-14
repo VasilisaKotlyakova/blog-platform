@@ -10,11 +10,11 @@ import style from './article.module.scss';
 
 function Article({ article, onDelete = null, onFavoriteChange = null, showBody = false, showControls = false }) {
   return (
-    <article className={style.container}>
+    <article className={style.container} style={{ width: '950px' }}>
       <ArticleHeader article={article} onFavoriteChange={onFavoriteChange} />
       {article.tagList.length > 0 ? <ArticleTags article={article} /> : null}
       <ArticlePreview article={article} showControls={showControls} onDelete={onDelete} />
-      {showBody ? <ArticleBody article={article} /> : null}
+      {showBody && <ArticleBody article={article} />}
     </article>
   );
 }

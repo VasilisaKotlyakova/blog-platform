@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Alert } from 'antd';
 
 import App from './components/app';
 import store from './store/store';
@@ -12,6 +13,8 @@ import ProfilePage from './components/pages/profile-page';
 import NewArticlePage from './components/pages/new-article-page';
 import ArticlePage from './components/pages/article-page';
 import EditArticlePage from './components/pages/edit-article-page';
+
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +30,11 @@ root.render(
           <Route path="sign-in" element={<SignInPage />} />
           <Route path="sign-up" element={<SignUpPage />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route
+            path="success"
+            element={<Alert className="alert" message="Profile changed successfully" type="success" showIcon />}
+          />
+          <Route path="error" element={<Alert className="alert" message="Error" type="error" showIcon />} />
         </Route>
       </Routes>
     </BrowserRouter>

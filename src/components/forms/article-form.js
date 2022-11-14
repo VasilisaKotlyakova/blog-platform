@@ -27,7 +27,7 @@ function ArticleForm({ onCommit, initialValue = null, h2 }) {
   };
   return (
     <>
-      <div>
+      <div style={{width: "850px"}}>
         <h2>{h2}</h2>
         <Form requiredMark={false} layout="vertical" onFinish={handleCommit} initialValues={initialValue}>
           <Form.Item

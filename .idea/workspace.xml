@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41ece93e-70f3-43dd-9215-23c3c2fa088d" name="Changes" comment="" />
+    <list default="true" id="41ece93e-70f3-43dd-9215-23c3c2fa088d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/main.07c2c11c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/main.07c2c11c.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.9a86329c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.9a86329c.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.9a86329c.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/media/index.cd351d7c31d0d3fccf96.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/article/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/article-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/article-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/form-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/form-container.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/form-container.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/profile-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/profile-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/sign-in-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/sign-in-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/sign-up-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/sign-up-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/article-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/article-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/article-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/article-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/article-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/article-page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/edit-article-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/edit-article-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/new-article-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/new-article-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/profile-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/profile-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/sign-in-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/sign-in-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/sign-up-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/sign-up-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/errorSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/errorSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/userSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/userSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -28,12 +68,16 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2GB5t1VkCJw0e0OYvcs5ZUh5Bn8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -45,6 +89,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/vasilisa/Desktop/Projects/blog-platform-app/node_modules/prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -77,6 +122,11 @@
       <workItem from="1667422435135" duration="12679000" />
       <workItem from="1667851055563" duration="964000" />
       <workItem from="1667852844144" duration="166000" />
+      <workItem from="1667853762025" duration="353000" />
+      <workItem from="1667854185271" duration="83000" />
+      <workItem from="1667854305953" duration="672000" />
+      <workItem from="1668077414068" duration="28575000" />
+      <workItem from="1668398743053" duration="3255000" />
     </task>
     <servers />
   </component>
@@ -93,5 +143,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -8,7 +8,6 @@ import styles from './form-container.module.scss';
 
 function SignInForm({ signInFailed, onCommit }) {
   const [form] = useForm();
-
   useEffect(() => {
     if (!signInFailed) return;
     form.setFields([
@@ -18,7 +17,7 @@ function SignInForm({ signInFailed, onCommit }) {
   }, [form, signInFailed]);
   return (
     <>
-      <div>
+      <div style={{width: "350px"}}>
         <h2>Sign In</h2>
         <Form form={form} requiredMark={false} layout="vertical" onFinish={onCommit}>
           <Form.Item

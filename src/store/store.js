@@ -2,8 +2,8 @@ import { applyMiddleware, configureStore } from '@reduxjs/toolkit';
 // import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import { userReducer } from './reducer/userSlice';
-import { errorReducer } from './reducer/errorSlice';
+import { userReducer } from './reducers/userSlice';
+import { errorReducer } from './reducers/errorSlice';
 
 const store = configureStore({
   reducer: {

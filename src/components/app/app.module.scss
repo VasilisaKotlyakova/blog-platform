@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 70rem;
   height: 100%;
 }
 
 .contentContainer {
-  width: 100%;
+  width: 70rem;
   height: 100%;
 }
 
@@ -15,4 +15,6 @@ body {
   background-color: #EBEEF3!important;
   padding: 0px;
   margin: 0px;
+  display: flex;
+  justify-content: center;
 }

@@ -1,18 +1,19 @@
 /* eslint-disable */
 import axios from 'axios';
+import { setItem } from './storage';
 
-export const BlogApiExceptionCode = {
+export const httpStatusCode = {
   UNAUTHORIZED: 'UNAUTHORIZED',
   INVALID_EMAIL_OR_PASSWORD: 'INVALID_EMAIL_OR_PASSWORD',
   NETWORK_ERROR: 'NETWORK_ERROR',
-  UNKNOWN: 'UNKNOWN',
+  UNKNOWN: 'UNKNOWN'
 };
 
-export class BlogApiException extends Error {
+export class httpStatus extends Error {
   constructor(code) {
     super(code);
     this.code = code;
-    this.name = 'BlogApiException';
+    this.name = 'httpStatus';
   }
 }
 
@@ -26,18 +27,18 @@ export default class Api {
 
   _errMiddleware(e) {
     if (e.response.status === 0) {
-      throw new BlogApiException(BlogApiExceptionCode.NETWORK_ERROR);
+      throw new httpStatus(httpStatusCode.NETWORK_ERROR);
     }
     if (e.response.status === 401) {
-      throw new BlogApiException(BlogApiExceptionCode.UNAUTHORIZED);
+      throw new httpStatus(httpStatusCode.UNAUTHORIZED);
     }
     if (e.response.data.errors) {
       const { errors } = e.response.data;
       if ('email or password' in errors) {
-        throw new BlogApiException(BlogApiExceptionCode.INVALID_EMAIL_OR_PASSWORD);
+        throw new httpStatus(httpStatusCode.INVALID_EMAIL_OR_PASSWORD);
       }
     }
-    throw new BlogApiException(BlogApiExceptionCode.UNKNOWN);
+    throw new httpStatus(httpStatusCode.UNKNOWN);
   }
 
   _bindErrMiddleware() {
@@ -52,15 +53,16 @@ export default class Api {
   }
 
   async signIn(user) {
-    console.log(3333, user);
     const response = await this.api.post('/users/login', { user });
-    this.setToken(response.data.user.token);
+    this.setAccessToken(response.data.user.token);
+    this.setHeader(response.data.user.token);
     return response.data;
   }
 
   async signUp(user) {
     const response = await this.api.post('/users', { user });
-    this.setToken(response.data.user.token);
+    this.setAccessToken(response.data.user.token);
+    this.setHeader(response.data.user.token);
     return response.data;
   }
 
@@ -78,10 +80,9 @@ export default class Api {
   }
 
   async editProfile(newUser) {
-    console.log(2222, newUser);
     const user = await this.api.put('/user', { user: newUser });
     const profile = await this.api.get(`/profiles/${user.data.user.username}`);
-    return { user: { ...user.data.user, ...profile.data.profile } };
+    return { user: { ...user.data.user, ...profile.data.profile }, status: user.status };
   }
 
   async fetchArticles(offset, limit) {
@@ -122,6 +123,15 @@ export default class Api {
   setToken(token) {
     this.api.defaults.headers.common['Authorization'] = token ? `Bearer ${token}` : null;
   }
+
+  setAccessToken(authToken) {
+    setItem('authTokenKey', authToken);
+  }
+
+  setHeader(authToken) {
+    this.api.defaults.headers.common['Authorization'] = authToken ? `Bearer ${authToken}` : null;
+  }
 }
 Api.baseUrl = 'https://blog.kata.academy/api';
-Api.default = new Api();
+
+export const apiConnect = new Api();

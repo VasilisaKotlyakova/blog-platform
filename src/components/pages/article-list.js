@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { Pagination, Spin } from 'antd';
+import { Pagination, Skeleton } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import Article from '../article/article';
-import Api from '../../service/service';
-import { profileSelector } from '../../store/reducer/userSlice';
+import Api, { apiConnect } from '../../services/service';
+import { profileSelector } from '../../store/reducers/userSlice';
 
 import style from './article-list.module.scss';
 
@@ -19,7 +19,7 @@ function ArticleList() {
   const loadArticlePage = async (page) => {
     setArticles(null);
     const offset = page * step - step;
-    const result = await Api.default.fetchArticles(offset, step);
+    const result = await apiConnect.fetchArticles(offset, step);
     setPageCount(Math.ceil(result.articlesCount / step));
     setArticles(result.articles);
   };
@@ -39,17 +39,17 @@ function ArticleList() {
       return { ...item, favorited: isFavorite, favoritesCount: item.favoritesCount + delta };
     });
     setArticles(newArticles);
-    await (isFavorite ? Api.default.favorite(article) : Api.default.unvaforite(article));
+    await (isFavorite ? apiConnect.favorite(article) : apiConnect.unvaforite(article));
   };
 
   const handleDelete = async (article) => {
     const newArticles = articles.filter((item) => item.slug !== article.slug);
     setArticles(newArticles);
-    await Api.default.deleteArticle(article);
+    await apiConnect.deleteArticle(article);
   };
 
   if (!articles) {
-    return <Spin size="large" />;
+    return <Skeleton />;
   }
 
   return (

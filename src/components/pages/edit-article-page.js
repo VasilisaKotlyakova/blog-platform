@@ -3,9 +3,9 @@ import { Spin } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import Api from '../../service/service';
+import { apiConnect } from '../../services/service';
 import ArticleForm from '../forms/article-form';
-import FormContainer from '../forms/form-container';
+import styles from '../forms/form-container.module.scss';
 
 function EditArticlePage() {
   const { slug } = useParams();
@@ -13,7 +13,7 @@ function EditArticlePage() {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    Api.default
+    apiConnect
       .fetchArticle(slug)
       .then((article) => article.article)
       .then(setArticle);
@@ -21,7 +21,7 @@ function EditArticlePage() {
 
   const handleEditArticle = async (data) => {
     const newArticle = { ...article, ...data };
-    const result = await Api.default.updateArticle(newArticle);
+    const result = await apiConnect.updateArticle(newArticle);
     navigate(`/articles/${result.article.slug}`);
   };
 
@@ -30,9 +30,11 @@ function EditArticlePage() {
   }
 
   return (
-    <FormContainer>
-      <ArticleForm initialValue={article} onCommit={handleEditArticle} h2="Edit article" />
-    </FormContainer>
+    <div className={styles.container}>
+      <div className={styles.body} style={{width: "950px"}}>
+        <ArticleForm initialValue={article} onCommit={handleEditArticle} h2="Edit article" />
+      </div>
+    </div>
   );
 }
 

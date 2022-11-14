@@ -3,7 +3,7 @@ import React from 'react';
 
 function ProfileForm({ defaultValue = null, onCommit }) {
   return (
-    <div>
+    <div style={{ width: '400px' }}>
       <h2>Edit Profile</h2>
       <Form initialValues={defaultValue} requiredMark={false} layout="vertical" onFinish={onCommit}>
         <Form.Item name="username" label="Username" rules={[{ required: true, message: 'Please enter username' }]}>

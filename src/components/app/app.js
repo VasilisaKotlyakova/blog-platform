@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { Spin, notification } from 'antd';
+import { Skeleton, notification } from 'antd';
 import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useStore, useSelector } from 'react-redux';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import Header from '../header/header';
-import { fetchProfile } from '../../store/reducer/userSlice';
-import { errorSelector } from '../../store/reducer/errorSlice';
+import { fetchProfile } from '../../store/reducers/userSlice';
+import { errorSelector } from '../../store/reducers/errorSlice';
 
 import style from './app.module.scss';
 import 'antd/dist/antd.css';
@@ -50,7 +50,7 @@ export default function App() {
     <>
       {loading ? (
         <div className={style.loadingContainer}>
-          <Spin size="large" />
+          <Skeleton />
         </div>
       ) : (
         <div className={style.contentContainer}>

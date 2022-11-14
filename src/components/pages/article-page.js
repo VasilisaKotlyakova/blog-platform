@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import Api from '../../service/service';
-import { profileSelector } from '../../store/reducer/userSlice';
+import { apiConnect } from '../../services/service';
+import { profileSelector } from '../../store/reducers/userSlice';
 import Article from '../article/article';
 
 import style from './article-page.module.scss';
@@ -17,7 +17,7 @@ function ArticlePage() {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    Api.default.fetchArticle(slug).then((article) => setArticle(article.article));
+    apiConnect.fetchArticle(slug).then((article) => setArticle(article.article));
   }, [slug]);
 
   if (!article) {
@@ -32,11 +32,11 @@ function ArticlePage() {
       favoritesCount: article.favoritesCount + delta,
     };
     setArticle(newArticle);
-    await (isFavorite ? Api.default.favorite(article) : Api.default.unvaforite(article));
+    await (isFavorite ? apiConnect.favorite(article) : apiConnect.unvaforite(article));
   };
 
   const handleDelete = async () => {
-    await Api.default.deleteArticle(article);
+    await apiConnect.deleteArticle(article);
     navigate('/');
   };
 

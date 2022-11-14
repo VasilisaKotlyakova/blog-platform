@@ -8,9 +8,10 @@ import styles from './form-container.module.scss';
 
 function SignUpForm({ onCommit }) {
   const [form] = useForm();
+  
   return (
     <>
-      <div>
+      <div style={{width: "400px"}}>
         <h2>Create new account</h2>
         <Form requiredMark={false} form={form} layout="vertical" onFinish={onCommit}>
           <Form.Item

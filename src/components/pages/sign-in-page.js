@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { BlogApiExceptionCode } from '../../service/service';
-import { signIn, authTokenSelector } from '../../store/reducer/userSlice';
-import FormContainer from '../forms/form-container';
+import { httpStatusCode } from '../../services/service';
+import { signIn, authTokenSelector } from '../../store/reducers/userSlice';
 import SignInForm from '../forms/sign-in-form';
+import styles from '../forms/form-container.module.scss';
 
 const useNoAuthFilter = () => {
   const authToken = useSelector(authTokenSelector);
@@ -29,7 +29,7 @@ function SignInPage() {
       await dispatch(signIn(data)).unwrap();
       navigate('/');
     } catch (e) {
-      if (e.code === BlogApiExceptionCode.INVALID_EMAIL_OR_PASSWORD) {
+      if (e.code === httpStatusCode.INVALID_EMAIL_OR_PASSWORD) {
         setAuthFailed(true);
         return;
       }
@@ -38,9 +38,11 @@ function SignInPage() {
   };
 
   return (
-    <FormContainer>
-      <SignInForm signInFailed={authFailed} onCommit={handleSignIn} />
-    </FormContainer>
+    <div className={styles.container}>
+      <div className={styles.body} style={{width: "450px"}}>
+        <SignInForm signInFailed={authFailed} onCommit={handleSignIn} />
+      </div>
+    </div>
   );
 }
 

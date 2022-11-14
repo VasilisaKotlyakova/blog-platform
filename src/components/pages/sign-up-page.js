@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { signUp } from '../../store/reducer/userSlice';
-import FormContainer from '../forms/form-container';
+import { signUp } from '../../store/reducers/userSlice';
 import SignUpForm from '../forms/sign-up-form';
+import styles from '../forms/form-container.module.scss';
 
 const useNoAuthFilter = () => {
   const authToken = useSelector((state) => state.user.authToken);
@@ -26,11 +27,12 @@ function SignUpPage() {
     await dispatch(signUp(data)).unwrap();
     navigate('/');
   };
-
   return (
-    <FormContainer>
-      <SignUpForm onCommit={handleSignUp} />
-    </FormContainer>
+    <div className={styles.container}>
+      <div className={styles.body} style={{width: "450px"}}>
+        <SignUpForm onCommit={handleSignUp} />
+      </div>
+    </div>
   );
 }
 

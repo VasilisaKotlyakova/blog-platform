@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { profileSelector, signOut } from '../../store/reducer/userSlice';
+import { profileSelector, signOut } from '../../store/reducers/userSlice';
 
 import style from './header.module.scss';
 
