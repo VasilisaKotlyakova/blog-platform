@@ -1,6 +1,6 @@
 # Project link
 
-https://vercel.com/vasilisakotlyakova/blog-platform-qcmutwi18/vasilisakotlyakova
+https://blog-platform-app-vasilisakotlyakova.vercel.app/
 
 # Getting Started with Create React App
 
